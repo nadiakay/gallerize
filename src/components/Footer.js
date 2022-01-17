@@ -11,7 +11,7 @@ export const Footer = () => {
     <div className="footer">
       {source === 'openverse' ? (
         <span>
-          Images from <a href="https://wordpress.org/openverse/">Openverse</a>
+          Images from <a href="https://wordpress.org/openverse/">Openverse</a>{' '}
           under Creative Commons license
         </span>
       ) : (
