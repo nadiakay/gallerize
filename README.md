@@ -9,3 +9,4 @@ Todo:
 - Styling
 - Source attribution on individual image pages
 - Move search form to separate component
+- Additional data sources (Flickr, Pixabay, Internet Archive...)
