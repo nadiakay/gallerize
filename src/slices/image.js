@@ -29,14 +29,21 @@ export const { getImage, getImageSuccess, getImageFailure } = imageSlice.actions
 export const imageSelector = (state) => state.image
 export default imageSlice.reducer
 
-export function fetchImage(id) {
+export function fetchImage(source, id) {
   return async (dispatch) => {
     dispatch(getImage())
 
+    let url
+    switch (source) {
+      case 'openverse':
+        url = `https://api.openverse.engineering/v1/images/${id}`
+        break
+      default:
+        url = `https://jsonplaceholder.typicode.com/photos/${id}`
+    }
+
     try {
-      const response = await fetch(
-        `https://api.openverse.engineering/v1/images/${id}`
-      )
+      const response = await fetch(url)
       const data = await response.json()
 
       dispatch(getImageSuccess(data))

@@ -36,17 +36,30 @@ export const imagesSelector = (state) => state.images
 
 export default imagesSlice.reducer
 
-export function fetchImages(query) {
+export function fetchImages(query, source) {
   return async (dispatch) => {
+    let url
+    switch (source) {
+      case 'openverse':
+        if (!query) query = 'sunsets'
+        url = `https://api.openverse.engineering/v1/images/?q=${query}&page_size=16&page=1`
+        break
+      default:
+        url = `https://jsonplaceholder.typicode.com/photos`
+    }
     dispatch(getImages())
 
     try {
-      const res = await fetch(
-        `https://api.openverse.engineering/v1/images/?q=${query}&page_size=16&page=1`
-      )
+      const res = await fetch(url)
       const data = await res.json()
 
-      dispatch(getImagesSuccess(data.results))
+      if (source === 'openverse') {
+        dispatch(getImagesSuccess(data.results))
+      } else {
+        const lessData = data.slice(0, 16)
+        dispatch(getImagesSuccess(lessData))
+        dispatch(setQuery(''))
+      }
     } catch (err) {
       dispatch(getImagesFailure())
     }

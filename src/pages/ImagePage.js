@@ -2,9 +2,10 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
+import { sourceSelector } from '../slices/source'
 import { fetchImage, imageSelector } from '../slices/image'
 
-const ImagePage = () => {
+export const ImagePage = () => {
   const params = useParams()
   const dispatch = useDispatch()
   const {
@@ -12,13 +13,13 @@ const ImagePage = () => {
     loading: imageLoading,
     hasErrors: imageHasErrors,
   } = useSelector(imageSelector)
-  console.log(useSelector(imageSelector))
+  const { source } = useSelector(sourceSelector)
 
   useEffect(() => {
     const { id } = params
 
-    dispatch(fetchImage(id))
-  }, [dispatch, params])
+    dispatch(fetchImage(source, id))
+  }, [params, dispatch, source])
 
   const renderImagePage = () => {
     if (imageLoading) return <p>Loading photo...</p>
@@ -34,5 +35,3 @@ const ImagePage = () => {
 
   return renderImagePage()
 }
-
-export default ImagePage
