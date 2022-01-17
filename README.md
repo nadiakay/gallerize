@@ -9,4 +9,3 @@ Todo:
 - Styling
 - Gallery pagination
 - Image info and source attribution on individual image pages
-- Gallery h2 doesn't print default 'sunset' query when searching openverse without query - fix 
