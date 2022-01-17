@@ -1,8 +1,8 @@
 # gallerize
 
-Photo gallery. Fetch public domain photos from an API and creates a gallery of thumbnails with links to full res images. Created with React, Redux toolkit, React Router and Hooks.
+Public domain photo gallery. Fetch photos from an API and render a gallery of thumbnails with links to full res images. Created with React plus Redux Toolkit, React Router, and React Hooks.
 
-Under development. Clone and run npm start to check out the dev version. Currently gallery view and individual image pages are functioning using photos from JSONPlaceholder API.
+Under development. Clone and run npm start to check out the dev version featuring a working gallery view and image pages using photos from JSONPlaceholder API.
 
 Todo:
 
