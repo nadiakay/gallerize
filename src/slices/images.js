@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const initialState = {
+  query: 'sunsets',
   loading: false,
   hasErrors: false,
   images: [],
@@ -32,12 +33,12 @@ export const imagesSelector = (state) => state.images
 
 export default imagesSlice.reducer
 
-export function fetchImages() {
+export function fetchImages(query) {
   return async (dispatch) => {
     dispatch(getImages())
 
     try {
-      const res = await fetch('https://api.openverse.engineering/v1/images/?q=test&page_size=16&page=1')
+      const res = await fetch(`https://api.openverse.engineering/v1/images/?q=${query}&page_size=16&page=1`)
       const data = await res.json()
 
       dispatch(getImagesSuccess(data.results))

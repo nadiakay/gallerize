@@ -7,11 +7,11 @@ import { ImageThumb } from '../components/ImageThumb'
 
 const Images = () => {
   const dispatch = useDispatch()
-  const { images, loading, hasErrors } = useSelector(imagesSelector)
+  const { query, images, loading, hasErrors } = useSelector(imagesSelector)
 
   useEffect(() => {
-    dispatch(fetchImages())
-  }, [dispatch])
+    dispatch(fetchImages(query))
+  }, [query, dispatch])
 
   const renderImages = () => {
     if (loading) return <p>Loading images,,,</p>
