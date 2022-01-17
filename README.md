@@ -8,3 +8,4 @@ Todo:
 
 - Styling
 - Source attribution on individual image pages
+- Move search form to separate component
