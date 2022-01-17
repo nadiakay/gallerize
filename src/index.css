@@ -30,6 +30,10 @@ section h1 {
   display: inline-block;
 }
 
+.thumb {
+  max-width: 150px;
+}
+
 .image {
   display: block;
   margin: auto;
