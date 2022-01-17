@@ -11,6 +11,9 @@ const imagesSlice = createSlice({
   name: 'images',
   initialState,
   reducers: {
+    setQuery: (state, { payload }) => {
+      state.query = payload
+    },
     getImages: (state) => {
       state.loading = true
     },
@@ -26,7 +29,7 @@ const imagesSlice = createSlice({
   },
 })
 
-export const { getImages, getImagesSuccess, getImagesFailure } =
+export const { setQuery, getImages, getImagesSuccess, getImagesFailure } =
   imagesSlice.actions
 
 export const imagesSelector = (state) => state.images
@@ -38,7 +41,9 @@ export function fetchImages(query) {
     dispatch(getImages())
 
     try {
-      const res = await fetch(`https://api.openverse.engineering/v1/images/?q=${query}&page_size=16&page=1`)
+      const res = await fetch(
+        `https://api.openverse.engineering/v1/images/?q=${query}&page_size=16&page=1`
+      )
       const data = await res.json()
 
       dispatch(getImagesSuccess(data.results))

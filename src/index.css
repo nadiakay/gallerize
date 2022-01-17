@@ -25,6 +25,21 @@ section h1 {
   text-align: center;
 }
 
+.search {
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.searchBar {
+  border: solid 1px #777;
+  border-radius: 4px;
+  border-right: none;
+  padding-left: 0.5rem;
+  font-size: 1.1rem;
+}
+
 .image-thumb {
   padding: 1.5rem;
   display: inline-block;
@@ -41,10 +56,8 @@ section h1 {
 }
 
 .button {
-  display: inline-block;
-  background: #ea3546;
-  color: white;
+  background: #fff;
   border-radius: 4px;
   font-weight: 700;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
 }
