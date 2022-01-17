@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchImage, imageSelector } from '../slices/image'
 
-import { Image } from '../components/Image'
-
 const ImagePage = ({ match }) => {
   const dispatch = useDispatch()
   const {
@@ -26,7 +24,7 @@ const ImagePage = ({ match }) => {
     return (
       <section>
         <h1>{image.title}</h1>
-        <Image image={image} />
+        <img src={image.url} alt={image.title} />
       </section>
     )
   }

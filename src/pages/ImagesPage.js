@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchImages, imagesSelector } from '../slices/images'
 
-import { Image } from '../components/Image'
+import { ImageThumb } from '../components/ImageThumb'
 
 const Images = () => {
   const dispatch = useDispatch()
@@ -17,7 +17,7 @@ const Images = () => {
     if (loading) return <p>Loading images,,,</p>
     if (hasErrors) return <p>Error retrieving images.</p>
 
-    return images.map((image) => <Image key={image.id} image={image} excerpt />)
+    return images.map((image) => <ImageThumb key={image.id} image={image} />)
   }
 
   return (
