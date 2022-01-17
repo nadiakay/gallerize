@@ -9,5 +9,4 @@ Todo:
 - Styling
 - Gallery pagination
 - Image info and source attribution on individual image pages
-- Move search form to separate component
-- Additional data sources (Flickr, Pixabay, Internet Archive...)
+- Gallery h2 doesn't print default 'sunset' query when searching openverse without query - fix 
