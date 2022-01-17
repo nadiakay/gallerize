@@ -21,9 +21,9 @@ export const Form = () => {
       onSubmit={(e) => {
         e.preventDefault()
         e.currentTarget.reset()
+        dispatch(setSource(newSource))
         if (!loading) {
-          dispatch(setSource(newSource))
-          if (source === 'openverse') dispatch(setQuery(newQuery))
+          if (newSource === 'openverse') dispatch(setQuery(newQuery))
           setNewQuery('')
         }
       }}
