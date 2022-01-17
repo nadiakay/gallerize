@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Dashboard = () => (
   <section>
-    <h1>Dashboard</h1>
+    <h1>Gallerize</h1>
     <p>This is the dashboard.</p>
     <Link to="/images" className="button">
       View Gallery

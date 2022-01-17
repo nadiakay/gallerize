@@ -23,7 +23,7 @@ const Images = () => {
   return (
     <section>
       <h1>Gallery</h1>
-      {renderImages()}
+      <div className="gallery">{renderImages()}</div>
     </section>
   )
 }
