@@ -35,7 +35,7 @@ export function fetchImage(id) {
 
     try {
       const response = await fetch(
-        `https://jsonplaceholder.typicode.com/photos/${id}`
+        `https://api.openverse.engineering/v1/images/${id}`
       )
       const data = await response.json()
 

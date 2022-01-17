@@ -37,10 +37,10 @@ export function fetchImages() {
     dispatch(getImages())
 
     try {
-      const res = await fetch('https://jsonplaceholder.typicode.com/photos')
+      const res = await fetch('https://api.openverse.engineering/v1/images/?q=test&page_size=16&page=1')
       const data = await res.json()
 
-      dispatch(getImagesSuccess(data))
+      dispatch(getImagesSuccess(data.results))
     } catch (err) {
       dispatch(getImagesFailure())
     }
