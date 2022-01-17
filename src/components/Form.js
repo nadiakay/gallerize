@@ -2,17 +2,15 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { sourceSelector } from '../slices/source'
-import { imagesSelector } from '../slices/images'
 
 import { setQuery } from '../slices/images'
 import { setSource } from '../slices/source'
 
 export const Form = () => {
   const dispatch = useDispatch()
-  const { loading } = useSelector(imagesSelector)
   const { source } = useSelector(sourceSelector)
 
-  const [newQuery, setNewQuery] = useState('')
+  const [newQuery, setNewQuery] = useState('sunsets')
   const [newSource, setNewSource] = useState(source)
 
   return (
@@ -22,10 +20,10 @@ export const Form = () => {
         e.preventDefault()
         e.currentTarget.reset()
         dispatch(setSource(newSource))
-        if (!loading) {
-          if (newSource === 'openverse') dispatch(setQuery(newQuery))
-          setNewQuery('')
+        if (newSource === 'openverse') {
+          dispatch(setQuery(newQuery))
         }
+        setNewQuery('')
       }}
     >
       <div className="selectSource">
@@ -51,10 +49,11 @@ export const Form = () => {
       <div className="search">
         <input
           type="text"
-          placeholder="Search Images..."
+          placeholder="sunsets"
           className="searchBar"
           onChange={(e) => setNewQuery(e.target.value)}
           value={newQuery}
+          disabled={newSource === 'jsonplaceholder'}
         />
         <button type="submit" className="button">
           <svg height="32" width="32">

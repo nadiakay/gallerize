@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const initialState = {
-  query: 'sunsets',
+  query: '',
   loading: false,
   hasErrors: false,
   images: [],
