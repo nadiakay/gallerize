@@ -26,6 +26,12 @@ section h1 {
   display: inline-block;
 }
 
+.image {
+  display: block;
+  margin: auto;
+  padding: 1.5rem;
+}
+
 .button {
   display: inline-block;
   background: #ea3546;
