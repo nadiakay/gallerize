@@ -7,6 +7,7 @@ Clone and run `npm start` to preview dev version.
 Todo:
 
 - Styling
-- Source attribution on individual image pages
+- Gallery pagination
+- Image info and source attribution on individual image pages
 - Move search form to separate component
 - Additional data sources (Flickr, Pixabay, Internet Archive...)
