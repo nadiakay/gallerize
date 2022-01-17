@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -20,8 +22,16 @@ section {
   padding: 0 1.5rem;
 }
 
-section h1 {
+h1 {
   font-size: 3rem;
+  text-align: center;
+}
+
+.gallerize {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
   text-align: center;
 }
 
@@ -40,6 +50,13 @@ section h1 {
   font-size: 1.1rem;
 }
 
+.button {
+  background: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
 .image-thumb {
   padding: 1.5rem;
   display: inline-block;
@@ -55,9 +72,8 @@ section h1 {
   padding: 1.5rem;
 }
 
-.button {
-  background: #fff;
-  border-radius: 4px;
-  font-weight: 700;
-  padding: 0.5rem 1rem;
+.footer {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.1rem;
 }

@@ -15,7 +15,7 @@ const Gallery = () => {
   }, [query, dispatch])
 
   const renderImages = () => {
-    if (loading) return <p>Loading images,,,</p>
+    if (loading) return <p>Loading images...</p>
     if (hasErrors) return <p>Error retrieving images.</p>
 
     return images.map((image) => <Thumb key={image.id} image={image} />)
@@ -23,7 +23,7 @@ const Gallery = () => {
 
   return (
     <section>
-      <h1>Gallerize</h1>
+      <h1 className="gallerize">Gallerize</h1>
       <form
         className="search"
         onSubmit={(e) => {
@@ -52,6 +52,7 @@ const Gallery = () => {
           </svg>
         </button>
       </form>
+      <h2>{query}</h2>
       <div className="gallery">{renderImages()}</div>
     </section>
   )
