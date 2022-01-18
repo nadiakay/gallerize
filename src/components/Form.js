@@ -26,7 +26,7 @@ export const Form = () => {
         setNewQuery('')
       }}
     >
-      <div className="selectSource">
+      <div className="select-source">
         <input
           type="radio"
           id="jsonplaceholder"
@@ -50,7 +50,7 @@ export const Form = () => {
         <input
           type="text"
           placeholder="sunsets"
-          className="searchBar"
+          className="search-bar"
           onChange={(e) => setNewQuery(e.target.value)}
           value={newQuery}
           disabled={newSource === 'jsonplaceholder'}

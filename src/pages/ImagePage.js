@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
+import { ImageInfo } from '../components/ImageInfo'
+
 import { sourceSelector } from '../slices/source'
 import { fetchImage, imageSelector } from '../slices/image'
 
@@ -28,7 +30,10 @@ export const ImagePage = () => {
     return (
       <section>
         <h1>{image.title}</h1>
-        <img className="image" src={image.url} alt={image.title} />
+        <div className="img-backdrop">
+          <img className="image" src={image.url} alt={image.title} />
+        </div>
+        {source === 'openverse' ? <ImageInfo image={image} /> : ''}
       </section>
     )
   }

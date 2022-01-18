@@ -8,18 +8,23 @@ export const Footer = () => {
   const { source } = useSelector(sourceSelector)
 
   return (
-    <div className="footer">
+    <footer>
+      <p>
+        <bold>
+          Site by <a href="https://github.com/nadiakay">Nadia</a>
+        </bold>
+      </p>
       {source === 'openverse' ? (
-        <span>
+        <p>
           Images from <a href="https://wordpress.org/openverse/">Openverse</a>{' '}
           under Creative Commons license
-        </span>
+        </p>
       ) : (
-        <span>
+        <p>
           Images from{' '}
           <a href="https://jsonplaceholder.typicode.com/">JSONPlaceholder</a>
-        </span>
+        </p>
       )}
-    </div>
+    </footer>
   )
 }

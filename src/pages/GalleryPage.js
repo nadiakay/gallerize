@@ -29,7 +29,7 @@ export const GalleryPage = () => {
     <section>
       <h1 className="gallerize">Gallerize</h1>
       <Form />
-      <h2>{query}</h2>
+      <h2>{query.charAt(0).toUpperCase() + query.slice(1)}</h2>
       <div className="gallery">{renderImages()}</div>
     </section>
   )

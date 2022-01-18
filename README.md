@@ -7,5 +7,6 @@ Clone and run `npm start` to preview dev version.
 Todo:
 
 - Styling
+- Prettier gallery tiling
 - Gallery pagination
-- Image info and source attribution on individual image pages
+- Fix issues with routing to different source apis for individual image pages
