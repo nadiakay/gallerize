@@ -9,9 +9,5 @@ Todo:
 - Styling
 - Prettier gallery tiling
 - Gallery pagination
-<<<<<<< HEAD
 - Fix issues with routing to different source apis for individual image pages
-=======
-- Image info and source attribution on individual image pages
-- More source options
->>>>>>> 9fa1fd62afc8aa87e0b151ec484000c801dc5028
+- More data sources (flickr, internet archive)
