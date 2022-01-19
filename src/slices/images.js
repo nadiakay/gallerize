@@ -42,7 +42,7 @@ export function fetchImages(query, source) {
     switch (source) {
       case 'openverse':
         if (!query) query = 'sunsets'
-        url = `https://api.openverse.engineering/v1/images/?q=${query}&page_size=16&page=1`
+        url = `https://api.openverse.engineering/v1/images/?q=${query}&page_size=20&page=1`
         break
       default:
         url = `https://jsonplaceholder.typicode.com/photos`
@@ -56,7 +56,7 @@ export function fetchImages(query, source) {
       if (source === 'openverse') {
         dispatch(getImagesSuccess(data.results))
       } else {
-        const lessData = data.slice(0, 16)
+        const lessData = data.slice(0, 20)
         dispatch(getImagesSuccess(lessData))
         dispatch(setQuery(''))
       }

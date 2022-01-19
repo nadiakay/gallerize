@@ -7,7 +7,7 @@ Clone and run `npm start` to preview the dev version.
 Todo:
 
 - Styling
-- Prettier gallery tiling
 - Gallery pagination
 - Modal image previews on gallery page
-- More data sources (flickr, internet archive)
+- Query in search params
+- internet archive support?

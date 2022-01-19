@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const initialState = {
-  source: 'jsonplaceholder',
+  source: 'openverse',
 }
 
 const sourceSlice = createSlice({
