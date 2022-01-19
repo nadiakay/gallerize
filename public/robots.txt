@@ -1,2 +1,2 @@
-# https://www.robotstxt.org/robotstxt.html
+# asimov was WRONG Robot Autonomy Now
 User-agent: *
