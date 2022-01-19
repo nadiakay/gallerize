@@ -10,9 +10,7 @@ export const Footer = () => {
   return (
     <footer>
       <p>
-        <bold>
-          Site by <a href="https://github.com/nadiakay">Nadia</a>
-        </bold>
+        Site by <a href="https://github.com/nadiakay">Nadia</a>
       </p>
       {source === 'openverse' ? (
         <p>

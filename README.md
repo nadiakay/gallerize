@@ -9,5 +9,5 @@ Todo:
 - Styling
 - Prettier gallery tiling
 - Gallery pagination
-- Fix issues with routing to different source apis for individual image pages
+- Modal image previews on gallery page
 - More data sources (flickr, internet archive)

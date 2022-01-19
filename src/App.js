@@ -13,7 +13,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<GalleryPage />} />
-          <Route exact path="/images/:id" element={<ImagePage />} />
+          <Route exact path="/:source/:id" element={<ImagePage />} />
         </Routes>
       </Router>
       <Footer />

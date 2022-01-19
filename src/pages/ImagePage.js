@@ -4,24 +4,21 @@ import { useParams } from 'react-router-dom'
 
 import { ImageInfo } from '../components/ImageInfo'
 
-import { sourceSelector } from '../slices/source'
 import { fetchImage, imageSelector } from '../slices/image'
 
 export const ImagePage = () => {
   const params = useParams()
+  const { source, id } = params
   const dispatch = useDispatch()
   const {
     image,
     loading: imageLoading,
     hasErrors: imageHasErrors,
   } = useSelector(imageSelector)
-  const { source } = useSelector(sourceSelector)
 
   useEffect(() => {
-    const { id } = params
-
     dispatch(fetchImage(source, id))
-  }, [params, dispatch, source])
+  }, [source, id, dispatch])
 
   const renderImagePage = () => {
     if (imageLoading) return <p>Loading photo...</p>
