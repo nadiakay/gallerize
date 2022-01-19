@@ -11,7 +11,7 @@ export const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="https://github.com/nadiakay/gallerize">Github</Link>
+          <a href="https://github.com/nadiakay/gallerize">Github</a>
         </li>
       </ul>
     </nav>
