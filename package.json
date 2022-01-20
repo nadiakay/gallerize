@@ -2,7 +2,7 @@
   "name": "gallerize",
   "homepage": "https://nadiakay.github.io/gallerize",
   "version": "0.1.0",
-  "author": "Nadia Konieczny <nadiakonieczny@outlook.com> (https://github.com/nadiakay)",
+  "author": "Nadia Konieczny <nadiakrakowski@gmail.com> (https://github.com/nadiakay)",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
