@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { sourceSelector } from '../slices/source'
 
-import { setQuery } from '../slices/images'
+import { setQuery, setPage } from '../slices/images'
 import { setSource } from '../slices/source'
 
 export const Form = () => {
@@ -20,6 +20,7 @@ export const Form = () => {
         e.preventDefault()
         e.currentTarget.reset()
         dispatch(setSource(newSource))
+        dispatch(setPage(1))
         if (newSource === 'openverse') {
           dispatch(setQuery(newQuery))
         }

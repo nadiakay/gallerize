@@ -5,16 +5,18 @@ import { fetchImages, imagesSelector } from '../slices/images'
 import { sourceSelector } from '../slices/source'
 
 import { Form } from '../components/Form'
+import { Pager } from '../components/Pager'
 import { Thumb } from '../components/Thumb'
 
 export const GalleryPage = () => {
   const dispatch = useDispatch()
-  const { query, images, loading, hasErrors } = useSelector(imagesSelector)
+  const { query, page, totalPages, images, loading, hasErrors } =
+    useSelector(imagesSelector)
   const { source } = useSelector(sourceSelector)
 
   useEffect(() => {
-    dispatch(fetchImages(query, source))
-  }, [dispatch, query, source])
+    dispatch(fetchImages(query, page, source))
+  }, [dispatch, query, page, source])
 
   const renderImages = () => {
     if (loading) return <p>Loading images...</p>
@@ -34,6 +36,11 @@ export const GalleryPage = () => {
       </blockquote>
       <Form />
       <h2>{query.charAt(0).toUpperCase() + query.slice(1)}</h2>
+      {source === 'openverse' ? (
+        <Pager page={page} totalPages={totalPages} />
+      ) : (
+        ''
+      )}
       <div className="gallery">{renderImages()}</div>
     </section>
   )
