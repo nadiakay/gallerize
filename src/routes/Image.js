@@ -6,7 +6,7 @@ import { ImageInfo } from '../components/ImageInfo'
 
 import { fetchImage, imageSelector } from '../slices/image'
 
-export const ImagePage = () => {
+export const Image = () => {
   const params = useParams()
   const { source, id } = params
   const dispatch = useDispatch()

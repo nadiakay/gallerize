@@ -8,7 +8,7 @@ import { Form } from '../components/Form'
 import { Pager } from '../components/Pager'
 import { Thumb } from '../components/Thumb'
 
-export const GalleryPage = () => {
+export const Gallery = () => {
   const dispatch = useDispatch()
   const { query, page, totalPages, images, loading, hasErrors } =
     useSelector(imagesSelector)

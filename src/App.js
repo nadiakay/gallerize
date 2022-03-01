@@ -1,22 +1,21 @@
 import React from 'react'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { Navbar } from './components/Navbar'
-import { Footer } from './components/Footer'
-import { GalleryPage } from './pages/GalleryPage'
-import { ImagePage } from './pages/ImagePage'
+import { Layout } from './routes/Layout'
+import { Gallery } from './routes/Gallery'
+import { Image } from './routes/Image'
 
 const App = () => {
   return (
     <div className="app">
-      <HashRouter>
-        <Navbar />
+      <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<GalleryPage />} />
-          <Route exact path="/:source/:id" element={<ImagePage />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Gallery />} />
+            <Route path="/:source/:id" element={<Image />} />
+          </Route>
         </Routes>
-      </HashRouter>
-      <Footer />
+      </BrowserRouter>
     </div>
   )
 }
