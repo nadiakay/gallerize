@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchImages, imagesSelector } from '../slices/images'
+import { fetchImages, setQuery, imagesSelector } from '../slices/images'
 import { sourceSelector } from '../slices/source'
 
 import { Form } from '../components/Form'
@@ -15,6 +15,7 @@ export const GalleryPage = () => {
   const { source } = useSelector(sourceSelector)
 
   useEffect(() => {
+    if (!query && source === 'openverse') dispatch(setQuery('sunsets'))
     dispatch(fetchImages(query, page, source))
   }, [dispatch, query, page, source])
 

@@ -55,7 +55,6 @@ export function fetchImages(query, page, source) {
     let url
     switch (source) {
       case 'openverse':
-        if (!query) query = 'sunsets'
         url = `https://api.openverse.engineering/v1/images/?q=${query}&page=${page}`
         break
       default:
