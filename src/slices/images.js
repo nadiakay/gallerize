@@ -52,6 +52,7 @@ export default imagesSlice.reducer
 
 export function fetchImages(query, page, source) {
   return async (dispatch) => {
+    if (!query && source === 'openverse') dispatch(setQuery('sunsets'))
     let url
     switch (source) {
       case 'openverse':
