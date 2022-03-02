@@ -1,12 +1,11 @@
 # gallerize
 
-Search for public domain and Creative Commons licensed photos. Created with React plus Redux Toolkit, React Router, and React Hooks. Images from [Openverse](https://wordpress.org/openverse/).
+Search for public domain and Creative Commons licensed photos. Created with React.js plus Redux.js and React Router. Images from [Openverse](https://wordpress.org/openverse/) API.
 
-Clone and run `npm start` to preview the dev version.
+Clone and run `npm start`, or see the [live build](https://nadiakay.github.io/gallerize/).
 
 Todo:
 
-- Fix missing gallery title title on pageload
 - Styling
 - Modal image previews on gallery page
 - Query in search params
