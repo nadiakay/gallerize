@@ -32,8 +32,8 @@ export const Gallery = () => {
     <section>
       <h1 className="gallerize">Gallerize</h1>
       <blockquote>
-        Search from millions of images in the public domain or licensed under
-        Creative Commons. Photos available through public APIs.
+        Search from millions of images in the public domain or available under
+        Creative Commons license. Images provided through public APIs.
       </blockquote>
       <Form />
       <h2>{query.charAt(0).toUpperCase() + query.slice(1)}</h2>

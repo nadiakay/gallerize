@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux'
 
 import { sourceSelector } from '../slices/source'
 
+import gitLogo from '../GitHub-Mark-Light-32px.png'
+
 export const Layout = () => {
   const { source } = useSelector(sourceSelector)
 
@@ -17,7 +19,10 @@ export const Layout = () => {
             </Link>
           </li>
           <li>
-            <a href="https://github.com/nadiakay/gallerize">Github</a>
+            <a href="https://github.com/nadiakay/gallerize">
+              Github&nbsp;&nbsp;
+              <img className="icon" src={gitLogo} alt="Github logo"></img>
+            </a>
           </li>
         </ul>
       </nav>

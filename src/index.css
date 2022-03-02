@@ -44,6 +44,7 @@ p {
 }
 
 blockquote {
+  font-size: 1rem;
   max-width: 60%;
   margin: auto;
   line-height: 1.5rem;
@@ -55,7 +56,7 @@ label {
 }
 
 nav {
-  background-color: #222;
+  background-color: #333;
   color: #eee;
 }
 
@@ -69,8 +70,14 @@ nav ul {
 }
 
 nav a {
+  display: flex;
+  align-items: center;
   color: #eee;
   text-decoration: none;
+}
+
+.icon {
+  max-height: 20px;
 }
 
 footer {
