@@ -6,7 +6,10 @@ Clone and run `npm start`, or see the [live build](https://nadiakay.github.io/ga
 
 Todo:
 
-- Styling
 - Modal image previews on gallery page
 - Query in search params
 - internet archive support?
+
+- typescript !
+- search placeholder replaced with query
+- no # in url on clicking home link (gallerize# => gallerize)
